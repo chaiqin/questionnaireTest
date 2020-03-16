@@ -1,0 +1,53 @@
+<view class='memoty'>
+	<view>
+		<image class="userinfo-avatar" src="{{officialImg}}" />
+	</view>
+	<view class="chat-bubble chat-bubble-left">
+		欢迎进入本次测试，请认真回想你的生活然后，选择你认为符合自己的选项哦~
+		<button class="start-answer {{isStart}}" bindtap="start">开始测试</button>
+	</view>
+</view>
+<view class="user" hidden="{{go}}">
+	<view class="last-ques chat-bubble chat-bubble-right ">
+		开始
+	</view>
+	<view>
+		<image class="userinfo-avatar" src="{{userImg}}" />
+	</view>
+</view>
+<block tt:for="{{question}}">
+	<block tt:if="{{item.select!=0}}">
+	<view class='memoty'>
+		<view>
+			<image class="userinfo-avatar" src="{{officialImg}}" />
+		</view>
+		<view class="chat-bubble chat-bubble-left">
+			{{item.title}}
+			<view class="option">
+			<button class="answer-but {{item.inconform}}" data-id="{{index}}" data-status=1 bindtap="select">不符合</button>
+			<button class="answer-but {{item.conform}}" data-id="{{index}}" data-status=2 bindtap="select">符合</button>
+			</view>
+		</view>
+	</view>
+	<view class="user" tt:if="{{item.select==2 && item.isLast!=1}}">
+		<view class="last-ques chat-bubble chat-bubble-right ">
+			下一题
+		</view>
+		<view>
+			<image class="userinfo-avatar" src="{{userImg}}" />
+		</view>
+	</view>
+	<view class="user" tt:if="{{item.isLast==1}}">
+		<view class="last-ques chat-bubble chat-bubble-right ">
+			答完了
+		</view>
+		<view>
+			<image class="userinfo-avatar" src="{{userImg}}" />
+		</view>
+	</view>
+	</block>
+</block>
+<view class="last-height"></view>
+<view class="footer" hidden="{{isShowSubmit}}">
+	<button class="footer-button" bindtap="submit">提交答案</button>
+</view>

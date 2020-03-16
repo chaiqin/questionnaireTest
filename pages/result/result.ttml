@@ -1,0 +1,16 @@
+<view class="chart">
+	<canvas canvas-id="canvas"></canvas>
+</view>
+<block tt:for="{{info}}">
+<view class="root">
+	<image class='background-image' mode="widthFix" src="../../resources/img/title-bg.png" />
+	<view class="title">
+		你的性格<text class="per">{{item.per}}%</text>趋向{{item.charcter}}
+	</view>
+</view>
+<image mode="widthFix" style="width:100%" src="{{item.img}}" />
+</block>
+<view class="last-height"></view>
+<view class="footer" hidden="{{isShowSubmit}}">
+	<button class="footer-button" bindtap="submit">￥1重新测试</button>
+</view>

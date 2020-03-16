@@ -1,0 +1,43 @@
+<image mode="widthFix" style="width:100%;" src="../../resources/img/1.png" />
+<view class="title">
+	<view>{{title}}</view>
+	<view class="subheading">{{subheading}}</view>
+	<view class="prev">
+		<view class="pri">
+			<view class="money">￥{{money}}</view>
+			<text class="originalPrice">￥{{originalPrice}}
+		</view>
+		<text class="prev-field" decode="{{true}}">
+			精选108道&nbsp;|&nbsp;已测{{testNum}}人
+		</text>
+	</view>
+	<view class="nav">
+		<view class="nav-option nav-select">测评介绍</view>
+		<view class="nav-option nav-comment" bindtap="roll">用户评价<view class="nav-num">184</view>
+		</view>
+	</view>
+</view>
+<image mode="widthFix" style="width:100%" src="../../resources/img/2.png" />
+<image data-id="comment" mode="widthFix" style="width:100%" src="../../resources/img/3.png" />
+<!-- <view class="evaluate">
+	<text decode="{{true}}">用户评价&nbsp;&nbsp;(69)</text>
+</view>
+<view class='memoty' tt:for="{{comment}}">
+	<view>
+		<image class="userinfo-avatar" src="../../resources/img/{{item.headImg}}" />
+	</view>
+	<view>
+		<view class="list">
+			<view class='name'>{{item.name}}</view>
+			<view class='fabulous'>{{item.num}}<text decode="{{true}}">&nbsp;</text>
+				<image class="fabulous-t" src="../../resources/img/fabulous.png" />
+			</view>
+		</view>
+		<view class='content'>{{item.content}}</view>
+	</view>
+</view> -->
+
+<view class="last-height"></view>
+	<view class="footer">
+		<button class="footer-button" bindtap="submit">￥1立即测试</button>
+</view>

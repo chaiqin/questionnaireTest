@@ -1,0 +1,137 @@
+.memoty {
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  padding: 30rpx 30rpx 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 28rpx;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.chat-bubble{
+  position: relative;
+  margin:0 30rpx 24rpx 30rpx;
+  padding:10rpx 16rpx;
+  word-break: break-all;
+  background:#F5F5F5;
+  border: 2rpx solid #989898;
+  border-radius: 10rpx;
+  width:440rpx;
+}
+.chat-bubble-left {}
+.chat-bubble-left:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40rpx;
+  top:10rpx;
+  border: 20rpx solid;
+  border-color:transparent #989898 transparent  transparent ;
+}
+.chat-bubble-left:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ left:-32rpx;
+ top:14rpx;
+ border: 16rpx solid;
+ border-color:transparent #F5F5F5 transparent  transparent ;
+}
+.chat-bubble-right {}
+.chat-bubble-right:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -40rpx;
+  top:10rpx;
+  border: 20rpx solid;
+  border-color:transparent transparent transparent #989898;
+}
+.chat-bubble-right:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ right:-32rpx;
+ top:14rpx;
+ border: 16rpx solid;
+ border-color:transparent transparent transparent #ffffff ;
+}
+
+.start-answer{
+  font-size: 28rpx;
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: white;
+  margin-right: 0;
+  margin-top: 20rpx;
+}
+
+.option{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+
+.answer-but{
+  font-size: 28rpx;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: white;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 20rpx;
+}
+
+.user {
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  padding: 30rpx 30rpx 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 28rpx;
+}
+
+.last-ques{
+  width: 110rpx;
+}
+
+.selected{
+  background-color: #2670ED;
+}
+
+.footer{
+    position:fixed;
+	bottom:0;
+    background-color:white;
+    height: 80rpx;
+    width: 100%;
+    padding: 10rpx 0;
+}
+
+.footer-button{
+    height: 80rpx;
+    width: 700rpx;
+    background-color: #FFA130;
+    color: white;
+}
+
+.last-height{
+    height: 130rpx;
+}

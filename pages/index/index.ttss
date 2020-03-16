@@ -1,0 +1,134 @@
+
+.title{
+    margin-top: 16rpx;
+    padding: 0 30rpx 30rpx 30rpx;
+}
+
+.subheading{
+    margin-top: 20rpx;
+    color: grey;
+    font-size: 24rpx;
+}
+.prev{
+    margin-top: 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    justify-content:space-between;
+}
+.pri{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+}
+.money{
+    color: #F69A1F;
+}
+
+.originalPrice{
+    font-size: 24rpx;
+    color: grey;
+    text-decoration:line-through;
+}
+.prev-field{
+    font-size: 24rpx;
+    color: grey;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    font-size: 28rpx;
+    margin-top: 50rpx;
+}
+
+.nav-select{
+    border-bottom: 5rpx solid #58C6B1;
+}
+
+.nav-option{
+    padding-bottom: 10rpx; 
+}
+
+.nav-comment{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+}
+
+.nav-num{
+    margin-left: 4rpx;
+    font-size: 24rpx;
+}
+
+.evaluate{
+    font-size: 32rpx;
+    font-weight:bold;
+    margin-left: 30rpx;
+    margin-top:60rpx;
+}
+
+.footer{
+    position:fixed;
+	bottom:0;
+    background-color:white;
+    height: 80rpx;
+    width: 100%;
+    padding: 10rpx 0;
+}
+
+.last-height{
+    height: 130rpx;
+}
+
+.footer-button{
+    height: 80rpx;
+    width: 700rpx;
+    background-color: #FFA130;
+    color: white;
+}
+
+.memoty {
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  padding: 30rpx 30rpx 0 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.userinfo-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+  margin-right: 20rpx;
+}
+
+.name {
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 15rpx;
+}
+.fabulous{
+    height: 60rpx;
+}
+.fabulous-t{
+    width: 40rpx;
+    height: 40rpx;
+}
+.content {
+  font-size: 33rpx;
+}
+
+.list{
+    font-size: 30rpx;
+    width: 600rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
