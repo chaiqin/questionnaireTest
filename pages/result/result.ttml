@@ -3,7 +3,7 @@
 </view>
 <block tt:for="{{info}}">
 <view class="root">
-	<image class='background-image' mode="widthFix" src="../../resources/img/title-bg.png" />
+	<image class='background-image' mode="widthFix" src="{{imgHead}}title-bg.png" />
 	<view class="title">
 		你的性格<text class="per">{{item.per}}%</text>趋向{{item.charcter}}
 	</view>

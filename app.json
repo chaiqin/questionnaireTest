@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/result/result",
-    "pages/answer/answer"
+    "pages/answer/answer",
+    "pages/result/result"
   ],
   "window":{
     "backgroundTextStyle":"light",

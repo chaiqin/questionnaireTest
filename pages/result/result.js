@@ -7,6 +7,7 @@ Page({
   data: {
     charcter:['完美型', '给予型', '实干型', '浪漫型', '观察型', '怀疑型','享乐型','统治型','调停型'],
     numArr:[14,12,12,12,13,11,9,12,13], //题目各自数量
+    imgHead:app.globalData.imgHead,
     info:[]
   },
   onLoad: function (options) {
@@ -21,6 +22,7 @@ Page({
         max++;
       }
     }
+    // var result=[5,6,8,8,6,9,4,5,8];
     //计算性格占比
     var perArr = [];
     for(var j = 0;j<result.length;j++){
@@ -42,13 +44,14 @@ Page({
       extra: {
         radar: {
           max: 100,//雷达数值的最大值
+          // gridColor:"#ffffff", //网格颜色
           // labelColor:"#2C2C2C",
         }
       }
     });
 
     //获取前两个类型
-    var img = "../../resources/img/character-";
+    var img = app.globalData.imgHead+"character-";
     var arr = [];
     var oneObj = {},twoObj = {};
     var temp = perArr.slice();
@@ -81,9 +84,7 @@ Page({
   },
 
   submit: function (event) {
-    tt.redirectTo({
-      url: `/pages/answer/answer`,
-    });
+    app.startTest();
   },
 
 })

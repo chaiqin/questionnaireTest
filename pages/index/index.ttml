@@ -1,4 +1,4 @@
-<image mode="widthFix" style="width:100%;" src="../../resources/img/1.png" />
+<image mode="widthFix" style="width:100%;" src="{{imgHead}}1.png" />
 <view class="title">
 	<view>{{title}}</view>
 	<view class="subheading">{{subheading}}</view>
@@ -17,8 +17,8 @@
 		</view>
 	</view>
 </view>
-<image mode="widthFix" style="width:100%" src="../../resources/img/2.png" />
-<image data-id="comment" mode="widthFix" style="width:100%" src="../../resources/img/3.png" />
+<image mode="widthFix" style="width:100%" src="{{imgHead}}2.png" />
+<image data-id="comment" mode="widthFix" style="width:100%" src="{{imgHead}}3.png" />
 <!-- <view class="evaluate">
 	<text decode="{{true}}">用户评价&nbsp;&nbsp;(69)</text>
 </view>

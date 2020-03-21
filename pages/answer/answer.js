@@ -6,8 +6,8 @@ Page({
     go: 'true', //开始回复是否隐藏
     isShowSubmit: "true", //提交按钮显示控制
     isShowModal: false,
-    officialImg: "../../resources/img/official.png",
-    userImg: "../../resources/img/user.png",
+    officialImg: app.globalData.imgHead+"official.png",
+    userImg: app.globalData.imgHead+"user.png",
     question: [
       //select:0未选择|1待选择|2已选择
       { title: "你很容易迷惑。", characterType: 9, select: 0, conform: "", inconform: "" },

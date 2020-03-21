@@ -6,7 +6,7 @@
 		欢迎进入本次测试，请认真回想你的生活然后，选择你认为符合自己的选项哦~
 		<button class="start-answer {{isStart}}" bindtap="start">开始测试</button>
 	</view>
-</view>
+</view> 
 <view class="user" hidden="{{go}}">
 	<view class="last-ques chat-bubble chat-bubble-right ">
 		开始
