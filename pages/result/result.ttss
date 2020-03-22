@@ -2,13 +2,27 @@ page{
     /* background-color: #F8CAC0; */
   background-color: #034A89;
 }
+.chart-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 26rpx;
+    color: white;
+}
+.chart-block{
+    width: 40rpx;
+    height: 30rpx;
+    background-color: #7cb5ec;
+    margin-right: 10rpx;
+}
 .chart{
   margin-top: 50rpx;
 }
-.canvas {
-  width: 640px;
-  height: 600px;
-  transform: scale(0.5)
+canvas {
+  width: 750rpx;
+  height: 460rpx;
 }
 .root {
    width: 100%;
@@ -43,7 +57,7 @@ page{
     position:fixed;
 	bottom:0;
     background-color:white;
-    height: 80rpx;
+    height: 120rpx;
     width: 100%;
     padding: 10rpx 0;
 }
@@ -55,5 +69,5 @@ page{
 }
 
 .last-height{
-    height: 130rpx;
+    height: 145rpx;
 }

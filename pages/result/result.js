@@ -15,11 +15,9 @@ Page({
     var data = JSON.parse(options.data)
     //计算对应类型个数和总数
     var result=[0,0,0,0,0,0,0,0,0];
-    var max=0;
     for(var i = 0;i<data.length;i++){
       if(data[i].conform!=""){
         result[data[i].characterType-1] += 1;
-        max++;
       }
     }
     // var result=[5,6,8,8,6,9,4,5,8];
@@ -34,18 +32,20 @@ Page({
       animation: true,
       canvasId: 'canvas',
       type: 'radar',
+      legend: false,
       categories: this.data.charcter,
       series: [{
         name: '性格占比图',
-        data: perArr
+        data: perArr,
+        // color:"#ffffff",
       }],
-      width: 360,
-      height: 200,
+      width: 375,
+      height: 220,
       extra: {
         radar: {
           max: 100,//雷达数值的最大值
           // gridColor:"#ffffff", //网格颜色
-          // labelColor:"#2C2C2C",
+          labelColor:"#ffffff",
         }
       }
     });

@@ -6,8 +6,8 @@ Page({
     go: 'true', //开始回复是否隐藏
     isShowSubmit: "true", //提交按钮显示控制
     isShowModal: false,
-    officialImg: app.globalData.imgHead+"official.png",
-    userImg: app.globalData.imgHead+"user.png",
+    officialImg: app.globalData.imgHead + "official.png",
+    userImg: app.globalData.imgHead + "user.png",
     question: [
       //select:0未选择|1待选择|2已选择
       { title: "你很容易迷惑。", characterType: 9, select: 0, conform: "", inconform: "" },
@@ -117,7 +117,7 @@ Page({
       { title: "你很难找到一种能让你真正感到被爱的关系。", characterType: 4, select: 0, conform: "", inconform: "" },
       { title: "假如你想要结束一段关系，你不是直接告诉对方就是激怒他让他离开你。", characterType: 1, select: 0, conform: "", inconform: "" },
       { title: "你温和平静，不自夸，不爱与人竞争。", characterType: 9, select: 0, conform: "", inconform: "" },
-      { title: "你有时善良可爱，有时又粗野暴躁，很难捉摸。", characterType: 9, select: 0, conform: "", inconform: "" },
+      { title: "你有时善良可爱，有时又粗野暴躁，很难捉摸。", characterType: 9, select: 0, conform: "", inconform: "", isLast: 1 },
     ]
   },
   onLoad: function () {
@@ -152,13 +152,22 @@ Page({
     } else {
       tempArr[param.id].conform = "selected";
     }
-    //下一个选项设置为待选择
-    if (tempArr[param.id + 1] != null && tempArr[param.id + 1].select == 0) {
-      tempArr[param.id + 1].select = 1;
-    }
     this.setData({
       question: tempArr,
     })
+    //下一个选项设置为待选择
+    if (tempArr[param.id + 1] != null && tempArr[param.id + 1].select == 0) {
+      tempArr[param.id + 1].select = 1;
+      this.setData({
+        question: tempArr,
+      }, function () {
+        //页面下拉
+        tt.pageScrollTo({
+          scrollTop: param.id * 1000,
+          duration: 1,
+        });
+      })
+    }
 
     //最后一个弹框
     if (tempArr[param.id + 1] == null && this.data.isShowModal == false) {
@@ -185,11 +194,6 @@ Page({
         }
       });
     }
-
-    tt.pageScrollTo({
-      scrollTop: param.id * 200,
-      duration: 1000,
-    });
   },
 
   //提交

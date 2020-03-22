@@ -4,11 +4,15 @@
 	<view class="subheading">{{subheading}}</view>
 	<view class="prev">
 		<view class="pri">
-			<view class="money">￥{{money}}</view>
-			<text class="originalPrice">￥{{originalPrice}}
+			<view>
+				<view class="money">￥{{money}}</view>
+			</view>
+			<view>
+				<text class="originalPrice">￥{{originalPrice}}
+			</view>
 		</view>
 		<text class="prev-field" decode="{{true}}">
-			精选108道&nbsp;|&nbsp;已测{{testNum}}人
+			已测{{testNum}}人
 		</text>
 	</view>
 	<view class="nav">
@@ -38,6 +42,6 @@
 </view> -->
 
 <view class="last-height"></view>
-	<view class="footer">
-		<button class="footer-button" bindtap="submit">￥1立即测试</button>
+<view class="footer">
+	<button class="footer-button" bindtap="submit">￥1立即测试</button>
 </view>

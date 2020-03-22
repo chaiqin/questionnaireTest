@@ -1,12 +1,20 @@
+.scroll{
+     height: 100vh;
+   width: 100vw;
+}
+.banner{
+  font-size: 26rpx;
+  width: 100%;
+  text-align: center;
+}
 .memoty {
   box-sizing: border-box;
   background-color: white;
   width: 100%;
-  padding: 30rpx 30rpx 0 30rpx;
+  padding: 10rpx 30rpx 0 30rpx;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  font-size: 28rpx;
 }
 
 .userinfo-avatar {
@@ -71,13 +79,13 @@
 }
 
 .start-answer{
-  font-size: 28rpx;
-  width: 180rpx;
-  height: 50rpx;
-  line-height: 50rpx;
+  width: 200rpx;
+  height: 52rpx;
+  line-height: 44rpx;
   background-color: white;
   margin-right: 0;
   margin-top: 20rpx;
+  padding: 6rpx;
 }
 
 .option{
@@ -87,14 +95,14 @@
 }
 
 .answer-but{
-  font-size: 28rpx;
-  width: 150rpx;
-  height: 50rpx;
-  line-height: 50rpx;
+  width: 180rpx;
+  height: 52rpx;
+  line-height: 44rpx;
   background-color: white;
   margin-right: 0;
   margin-left: 0;
   margin-top: 20rpx;
+  padding: 6rpx;
 }
 
 .user {
@@ -105,11 +113,10 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  font-size: 28rpx;
 }
 
 .last-ques{
-  width: 110rpx;
+  width: 140rpx;
 }
 
 .selected{
@@ -120,7 +127,7 @@
     position:fixed;
 	bottom:0;
     background-color:white;
-    height: 80rpx;
+    height: 120rpx;
     width: 100%;
     padding: 10rpx 0;
 }
@@ -133,5 +140,5 @@
 }
 
 .last-height{
-    height: 130rpx;
+    height: 260rpx;
 }

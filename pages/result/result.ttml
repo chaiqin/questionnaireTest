@@ -1,5 +1,9 @@
 <view class="chart">
 	<canvas canvas-id="canvas"></canvas>
+	<view class="chart-banner">
+		<view class="chart-block"></view>
+		<view class="chart-name">性格占比图</view>
+	</view>
 </view>
 <block tt:for="{{info}}">
 <view class="root">
