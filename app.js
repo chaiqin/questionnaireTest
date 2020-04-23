@@ -5,10 +5,10 @@ App({
   },
   //公共数据
   globalData: {
-    imgHead: "http://47.100.79.233/img/",  //图片头路径
+    imgHead: "https://www.thanksin.com/public/img/",  //图片头路径
     //服务请求路径
     service: {
-      payUrl: "http://47.100.79.233/thanksin/public/"
+      payUrl: "https://www.thanksin.com/public/"
     }
   },
 
