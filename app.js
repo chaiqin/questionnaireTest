@@ -5,29 +5,43 @@ App({
   },
   //公共数据
   globalData: {
-    imgHead: "https://www.thanksin.com/public/img/",  //图片头路径
+    imgHead: "https://www.thanksin.com/img/",  //图片头路径
     //服务请求路径
     service: {
-      payUrl: "https://www.thanksin.com/public/"
+      payUrl: "https://www.thanksin.com/"
     }
   },
 
   //提交测试
   startTest: function (event) {
-    tt.request({
-      url: that.globalData.service.payUrl,
-      success(res) {
-        console.log(res.data);
-        console.log(`request调用成功`);
-        that.cashier(res.data);
-      },
-      fail(res) {
-        console.log(`request调用失败`);
-      }
-    });
+    var os = tt.getSystemInfoSync().platform;
+    console.log(os)
+    if (os == "ios") {
+      tt.showModal({
+        title: "提示",
+        content: "IOS系统暂不支持虚拟支付",
+        showCancel: false,
+        fail(res) {
+          console.log(`showModal调用失败`);
+        }
+      });
+    } else {
+      console.log("pay")
+      tt.request({
+        url: that.globalData.service.payUrl,
+        success(res) {
+          console.log(res.data);
+          console.log(`request调用成功`);
+          that.cashier(res.data);
+        },
+        fail(res) {
+          console.log(`request调用失败`);
+        }
+      });
+    }
   },
 
-    //唤起收银台
+  //唤起收银台
   cashier: function (orderInfo) {
     tt.pay({
       orderInfo: orderInfo,
